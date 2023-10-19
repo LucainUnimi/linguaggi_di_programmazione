@@ -3,6 +3,8 @@ Put into a list, called alkaline_earth_metals, the atomic numbers of the six alk
 
 - Write a function that returns the highest atomic number in alkaline_earth_metals.
 - Write a function that sorts alkaline_earth_metals in ascending order (from the lightest to the heaviest).
+
+
 Put into a second list, called noble_gases, the noble gases: helium (2), neon (10), argon (18), krypton (36), xenon (54), and radon (86). Then
 
 - Write a function (or a group of functions) that merges the two lists and print the result as couples (name, atomic number) sorted in ascending order on the element names.
@@ -13,6 +15,7 @@ Beyond the well-known Celsius and Fahrenheit, there are other six temperature sc
 
 - Write a function that given a pure number returns a conversion table for it among any of the 8 scales.
 - Write a function that given a temperature in a specified scale returns a list of all the corresponding temperatures in the other scales, note that the scale must be specified.
+
 **Hint** Define a proper datatype for the temperature.
 
 # Exercise 3
