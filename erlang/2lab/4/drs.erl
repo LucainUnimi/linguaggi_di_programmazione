@@ -21,7 +21,6 @@ loop(C, L) ->
 
 slave_reverse({S, I}) -> master ! {lists:reverse(S), I}.
 
-
 subs(S, L, _, Pos, C) when (Pos + (L div 10)) > L -> [{lists:sublist(S, Pos, (L div 10)), C}];
 subs(S, L, M, Pos, C) when M =/= 0 -> [ {lists:sublist(S, Pos, (L div 10 )+1 ), C} | subs(S, L, M-1, Pos+(L div 10 +1), C+1) ];
 subs(S, L, M, Pos, C) -> [{lists:sublist(S, Pos, (L div 10)), C} | subs(S, L, M, (Pos + (L div 10 )), C+1)].
