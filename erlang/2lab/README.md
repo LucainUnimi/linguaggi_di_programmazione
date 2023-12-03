@@ -60,3 +60,8 @@ Write a master-slave (see the previous exercise) distributed system where:
 - the service long_reversed_string() decomposes the input w into 10 strings w⁰, ..., w⁹ with the following lengths (# represents the operator length of a string, and n=#w%10): #w⁰=...=#wⁿ=#w/10+1 e #wⁿ⁺¹=...=#w⁹=#w/10 and forwards to 10 distinct actors (SlaveProcess) to reverse the 10 substrings w⁰, ..., w⁹ (service reverse_string()) and joins the 10 results.
 - the client process (ClientProcess) just ask for the service on a given string.
 When done with the exercise try to relax the constraint on the number of substrings from ten to a generic M passed as an input to the long_reversed_string service.
+
+# Excercise 5: IRC lite P2P
+Consider the IRC lite application shown in the lectures and re-engineer it to support a more peer-to-peer architecture where each client is connected via a socket to all the other clients that join to the same IRC channel.
+
+Note that also joining/unjoining could be dealt in a peer-to-peer fashion by sending the message (both joining or unjoining) to a client which propagate the action to the other clients.

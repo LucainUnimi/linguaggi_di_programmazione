@@ -8,7 +8,7 @@ long_reverse_string(S) -> register(master, spawn(fun() -> create_slave(S) end)).
 create_slave(S) -> Len = length(S),
                    Mod = Len rem 10,
                    Lsubs = subs(S, Len, Mod, 1, 1),
-                   lists:map(fun(Subs) -> spawn( fun() -> slave_reverse(Subs) end ) end, Lsubs),
+                   lists:map(fun(Subs) -> spawn(fun() -> slave_reverse(Subs) end ) end, Lsubs),
                    loop(0, [])
                    .
 

@@ -39,4 +39,6 @@ This functional interface, exported in the echo.erl module, will spawn the proce
 Then write a client to be connected to such a server and link these two processes each other. When the stop function is called, instead of sending the stop message, make the first process terminate abnormally. This should result in the EXIT signal propagating to the other process, causing it to terminate as well.
 
 # Exercise 5: Counting Calls.
+Write a module counting which provides the functionality for interacting with a server that counts how many times its services has been requested.
 
+It has to implement several services `dummy1, ... dummyn` (doesn't matter what they do or their real interface) and a service `tot` that returns a list of records indexed on each service (`tot` included) containing also how many times such a service has been requested. Test it from the shell.
